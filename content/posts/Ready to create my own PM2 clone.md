@@ -5,6 +5,7 @@ draft: false
 tags:
   - tech
   - tasky
+links: https://github.com/tashikomaaa/tasky
 ---
 Nous y voilà, je ne veux plus utiliser [PM2](https://pm2.keymetrics.io/), j'aimerais avoir la main sur mon propre outil.
 
