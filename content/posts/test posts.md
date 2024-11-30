@@ -7,7 +7,7 @@ tags:
   - test
 ---
 
-!![Image Description](/images/Visuel%20pour%20tablette.png)
+`![Visuel pour tablette.png](/Visuel pour tablette.png)`
 Welcome in my blog !
 
 This is juste a test for the init of my blog and test it
