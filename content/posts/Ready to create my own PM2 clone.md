@@ -44,4 +44,4 @@ tasky/
 
 ---
 
-vous pouvez retrouver le projet ici => <a href="https://github.com/tashikomaaa/tasky" target="_blank" >TASKY on github</a>
+vous pouvez retrouver le projet ici => [Tasky repo](https://github.com/tashikomaaa/tasky)
