@@ -22,7 +22,7 @@ Son petit nom sera Tasky !
 
 ---
 
-!![Image Description](https://tashikomaaa.github.io/corvusblog/images/logo.png)
+![Image Description](https://tashikomaaa.github.io/corvusblog/images/logo.png)
 
 ---
 
