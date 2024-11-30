@@ -10,3 +10,11 @@ Nous y voilà, je ne veux plus utiliser [PM2](https://pm2.keymetrics.io/), j'aim
 
 J'ai décider de créer le miens du coup.
 
+#todo
+	  - [ ] Lancer des process
+	  - [ ]  Monitorer des process
+	  - [ ] Voir les logs des process
+	  - [ ] stoper les process
+	  - [ ] supprimer les process
+
+Voilà une petite idée des besoins pour recréer note propre process manager.
