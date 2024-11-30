@@ -11,17 +11,14 @@
             "id": "84bc0e038792d205",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "posts/test canvas.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "posts/2 .On the road again.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "test canvas"
+              "icon": "lucide-file",
+              "title": "2 .On the road again"
             }
           }
         ]
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/test canvas.canvas",
+                "file": "posts/2 .On the road again.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for test canvas"
+              "title": "Backlinks for 2 .On the road again"
             }
           },
           {
@@ -166,11 +163,11 @@
   },
   "active": "84bc0e038792d205",
   "lastOpenFiles": [
-    "posts/First post.md",
     "posts/test canvas.canvas",
+    "posts/2 .On the road again.md",
+    "posts/First post.md",
     "Welcome.md",
     "logo.png",
-    "posts/2 .On the road again.md",
     "posts/1 .Ready to create my own PM2 clone.md",
     "posts"
   ]

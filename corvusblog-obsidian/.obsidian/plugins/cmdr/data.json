@@ -1,0 +1,57 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "obsidian-shellcommands:shell-command-1h4b50afkh",
+      "icon": "lucide-upload-cloud",
+      "name": "Shell commands: Execute: updates",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "obsidian-shellcommands:shell-command-1h4b50afkh",
+      "icon": "lucide-upload-cloud",
+      "name": "Shell commands: Execute: updates",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [
+    {
+      "id": "obsidian-shellcommands:shell-command-1h4b50afkh",
+      "icon": "lucide-upload-cloud",
+      "name": "Shell commands: Execute: updates",
+      "mode": "any"
+    }
+  ],
+  "pageHeader": [
+    {
+      "id": "obsidian-shellcommands:shell-command-1h4b50afkh",
+      "icon": "lucide-upload-cloud",
+      "name": "Shell commands: Execute: updates",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}
