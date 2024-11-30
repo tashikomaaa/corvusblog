@@ -5,7 +5,6 @@ draft: false
 tags:
   - tech
   - tasky
-links: https://github.com/tashikomaaa/tasky
 ---
 Nous y voilà, je ne veux plus utiliser [PM2](https://pm2.keymetrics.io/), j'aimerais avoir la main sur mon propre outil.
 
@@ -19,3 +18,7 @@ J'ai décider de créer le miens du coup.
 - [ ] Send command to the process (optionnal)
 
 Voilà une petite idée des besoins pour recréer note propre process manager.
+
+
+
+vous pouvez retrouver le projet ici =>[tasky github] (https://github.com/tashikomaaa/tasky)
