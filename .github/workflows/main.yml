@@ -58,7 +58,9 @@ jobs:
         run: |
           hugo \
             --gc \
-            --baseURL "https://tashikomaaa.github.io/corvusblog/"          
+            --minify \
+            --cleanDestinationDir \
+            --baseURL "https://tashikomaaa.github.io/corvusblog"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
