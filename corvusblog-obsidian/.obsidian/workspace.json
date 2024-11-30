@@ -37,7 +37,8 @@
               "title": "1 .Ready to create my own PM2 clone"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "537dd8a389e0117c",
@@ -130,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2 .On the road again.md",
+                "file": "posts/1 .Ready to create my own PM2 clone.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -140,7 +141,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2 .On the road again"
+              "title": "Backlinks for 1 .Ready to create my own PM2 clone"
             }
           },
           {
@@ -201,10 +202,10 @@
       "cmdr:Shell commands: Execute: updates": false
     }
   },
-  "active": "fe7da6077629c21a",
+  "active": "36c5bc59fe71ad13",
   "lastOpenFiles": [
-    "posts/1 .Ready to create my own PM2 clone.md",
     "posts/2 .On the road again.md",
+    "posts/1 .Ready to create my own PM2 clone.md",
     "Three laws of motion.md",
     "{{<.md",
     "posts/First post.md",
