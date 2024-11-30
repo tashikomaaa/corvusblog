@@ -200,14 +200,16 @@
       "cmdr:Shell commands: Execute: updates": false
     }
   },
-  "active": "9b07e8a249ca4864",
+  "active": "ff83949de659391f",
   "lastOpenFiles": [
     "Three laws of motion.md",
     "posts/2 .On the road again.md",
+    "{{<.md",
+    "posts/First post.md",
+    "< relref \".md",
     "posts/1 .Ready to create my own PM2 clone.md",
     "logo.png",
     "posts/test canvas.canvas",
-    "posts/First post.md",
     "Welcome.md",
     "posts"
   ]
