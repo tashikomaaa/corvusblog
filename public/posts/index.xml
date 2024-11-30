@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Terminal</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Terminal</description>
+    <title>Posts on Corvus Blog</title>
+    <link>http://localhost:1313/corvusblog/posts/</link>
+    <description>Recent content in Posts on Corvus Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/corvusblog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>corvusblog</title>
-      <link>http://localhost:1313/posts/test-posts/</link>
+      <link>http://localhost:1313/corvusblog/posts/test-posts/</link>
       <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/test-posts/</guid>
+      <guid>http://localhost:1313/corvusblog/posts/test-posts/</guid>
       <description>&lt;p&gt;Welcome in my blog !&lt;/p&gt;
 &lt;p&gt;Here i want to put down some ideas, work, and just some thinking to be able to get it saved&lt;/p&gt;</description>
       <content>&lt;p&gt;Welcome in my blog !&lt;/p&gt;

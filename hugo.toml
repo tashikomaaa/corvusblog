@@ -1,4 +1,4 @@
-baseURL = "https://tashikomaaa.github.io/"
+baseURL = "https://tashikomaaa.github.io/corvusblog/"
 languageCode = "en-us"
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
@@ -30,7 +30,7 @@ paginate = 5
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  showLastUpdated = true
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
@@ -71,10 +71,10 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "Corvus Blog"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
+      subtitle = "A simple blog from a dev"
       owner = ""
       keywords = ""
       copyright = ""
@@ -90,7 +90,7 @@ paginate = 5
 
       [languages.en.params.logo]
         logoText = "Terminal"
-        logoHomeLink = "/"
+        logoHomeLink = "https://tashikomaaa.github.io/corvusblog/"
 
       [languages.en.menu]
         [[languages.en.menu.main]]
