@@ -11,14 +11,17 @@
             "id": "84bc0e038792d205",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "posts/First post.md",
-                "mode": "source",
-                "source": false
+                "file": "posts/test canvas.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "First post"
+              "icon": "lucide-layout-dashboard",
+              "title": "test canvas"
             }
           }
         ]
@@ -93,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/First post.md",
+                "file": "posts/test canvas.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for First post"
+              "title": "Backlinks for test canvas"
             }
           },
           {
@@ -163,9 +166,10 @@
   },
   "active": "84bc0e038792d205",
   "lastOpenFiles": [
+    "posts/First post.md",
+    "posts/test canvas.canvas",
     "Welcome.md",
     "logo.png",
-    "posts/First post.md",
     "posts/2 .On the road again.md",
     "posts/1 .Ready to create my own PM2 clone.md",
     "posts"
