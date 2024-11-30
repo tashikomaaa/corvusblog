@@ -13,10 +13,10 @@
       <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/posts/test-posts/</guid>
-      <description>&lt;p&gt;![[logo.webp]]
+      <description>&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;//localhost:1313/images/Visuel%20pour%20tablette.png&#34;&gt;
 Welcome in my blog !&lt;/p&gt;
 &lt;p&gt;This is juste a test for the init of my blog and test it&lt;/p&gt;</description>
-      <content>&lt;p&gt;![[logo.webp]]
+      <content>&lt;p&gt;!&lt;img alt=&#34;Image Description&#34; src=&#34;//localhost:1313/images/Visuel%20pour%20tablette.png&#34;&gt;
 Welcome in my blog !&lt;/p&gt;
 &lt;p&gt;This is juste a test for the init of my blog and test it&lt;/p&gt;
 </content>
