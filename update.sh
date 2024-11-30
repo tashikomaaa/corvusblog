@@ -1,6 +1,8 @@
 #!/bin/bash
 file="./versions"
 VERSION=$(car "$file")
+echo "update new version of the blog - $VERSION"
+
 rsync -av --delete "/home/corvus/Documents/Obsidian Vault/posts" "/home/corvus/corvusblog/content/"
 python3 images.py
 git add .
