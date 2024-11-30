@@ -7,7 +7,8 @@ tags:
   - test
 ---
 
-
+![[logo.webp]]
 Welcome in my blog !
 
-This is juste a test for the init of my blog and test it 
+This is juste a test for the init of my blog and test it
+
