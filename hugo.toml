@@ -10,6 +10,7 @@ paginate = 5
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
   relativeURLs = false
+  canonifyurls = true
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 0
