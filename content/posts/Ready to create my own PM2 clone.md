@@ -40,4 +40,4 @@ tasky/
 
 ---
 
-vous pouvez retrouver le projet ici =>[TASKY](https://github.com/tashikomaaa/tasky)
+vous pouvez retrouver le projet ici =>[TASKY](https://github.com/tashikomaaa/tasky){:target="_blank"}
