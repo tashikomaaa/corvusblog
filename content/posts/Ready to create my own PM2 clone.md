@@ -28,4 +28,4 @@ Son petit nom sera Tasky !
 
 ---
 
-vous pouvez retrouver le projet ici =>[tasky] (https://github.com/tashikomaaa/tasky)
+vous pouvez retrouver le projet ici =>[TASKY](https://github.com/tashikomaaa/tasky)
