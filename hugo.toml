@@ -103,3 +103,9 @@ paginate = 5
           url = "/showcase"
 
 
+[module]
+  [mounts]
+  source: assets
+  target: assets
+  source: static
+  target: assets
