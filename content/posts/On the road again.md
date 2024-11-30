@@ -39,11 +39,11 @@ on va avoir besoin de:
 - [chalk](https://www.npmjs.com/package/chalk) Pour mettre un peu de couleurs dans nos vies !
 - [pidusage](https://www.npmjs.com/package/pidusage) Pour connaitre le pourcentage d'utilisation du cpu pour chaque process
 
+---
+
 on va donc installer tout ça !
-on retourne a la racine du projet 
-```bash
-cd ..
-```
+
+---
 
 on va initier le projet et installer les dependences:
 ```bash
