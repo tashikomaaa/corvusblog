@@ -8,6 +8,6 @@ tags:
 ---
 
 Welcome in my blog !
-!![Image Description](/images/tab.png)
+!![Image Description](https://tashikomaaa.github.io/corvusblog/images/tab.png)
 This is juste a test for the init of my blog and test it
 
