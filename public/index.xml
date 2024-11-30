@@ -13,9 +13,11 @@
       <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/posts/test-posts/</guid>
-      <description>&lt;p&gt;Welcome in my blog !&lt;/p&gt;
+      <description>&lt;p&gt;![[logo.webp]]
+Welcome in my blog !&lt;/p&gt;
 &lt;p&gt;This is juste a test for the init of my blog and test it&lt;/p&gt;</description>
-      <content>&lt;p&gt;Welcome in my blog !&lt;/p&gt;
+      <content>&lt;p&gt;![[logo.webp]]
+Welcome in my blog !&lt;/p&gt;
 &lt;p&gt;This is juste a test for the init of my blog and test it&lt;/p&gt;
 </content>
     </item>
