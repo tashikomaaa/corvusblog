@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "0f80b8280d5b45d0",
+        "id": "2720d06f4a57aeb3",
         "type": "tabs",
         "children": [
           {
-            "id": "84bc0e038792d205",
+            "id": "fe7da6077629c21a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "posts/2 .On the road again.md",
-                "mode": "source",
+                "mode": "preview",
+                "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
@@ -163,14 +164,14 @@
       "cmdr:Shell commands: Execute: updates": false
     }
   },
-  "active": "84bc0e038792d205",
+  "active": "fe7da6077629c21a",
   "lastOpenFiles": [
-    "posts/test canvas.canvas",
+    "posts/1 .Ready to create my own PM2 clone.md",
     "posts/2 .On the road again.md",
+    "logo.png",
+    "posts/test canvas.canvas",
     "posts/First post.md",
     "Welcome.md",
-    "logo.png",
-    "posts/1 .Ready to create my own PM2 clone.md",
     "posts"
   ]
 }
