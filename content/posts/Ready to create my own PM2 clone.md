@@ -19,8 +19,12 @@ J'ai décider de créer le miens du coup.
 Voilà une petite idée des besoins pour recréer note propre process manager.
 
 Son petit nom sera Tasky !
+
+---
+
 !![Image Description](https://tashikomaaa.github.io/corvusblog/images/logo.png)
 
+---
 
 Alors du coup la structure du projet va ressembler à ça 
 
