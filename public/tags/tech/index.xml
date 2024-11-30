@@ -13,12 +13,12 @@
       <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/test-posts/</guid>
-      <description>&lt;p&gt;![Visuel pour tablette.png](/Visuel pour tablette.png)
-Welcome in my blog !&lt;/p&gt;
-&lt;p&gt;This is juste a test for the init of my blog and test it&lt;/p&gt;</description>
-      <content>&lt;p&gt;![Visuel pour tablette.png](/Visuel pour tablette.png)
-Welcome in my blog !&lt;/p&gt;
-&lt;p&gt;This is juste a test for the init of my blog and test it&lt;/p&gt;
+      <description>&lt;p&gt;Welcome in my blog !
+!&lt;img alt=&#34;Image Description&#34; src=&#34;http://localhost:1313/images/tab.png&#34;&gt;
+This is juste a test for the init of my blog and test it&lt;/p&gt;</description>
+      <content>&lt;p&gt;Welcome in my blog !
+!&lt;img alt=&#34;Image Description&#34; src=&#34;http://localhost:1313/images/tab.png&#34;&gt;
+This is juste a test for the init of my blog and test it&lt;/p&gt;
 </content>
     </item>
     
