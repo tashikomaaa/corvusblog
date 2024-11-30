@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "posts/2 .On the road again.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -94,13 +94,13 @@
               "type": "backlink",
               "state": {
                 "file": "posts/2 .On the road again.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
               "title": "Backlinks for 2 .On the road again"
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/First post.md",
+                "file": "posts/2 .On the road again.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from First post"
+              "title": "Outgoing links from 2 .On the road again"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/First post.md"
+                "file": "posts/2 .On the road again.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of First post"
+              "title": "Outline of 2 .On the road again"
             }
           }
         ]
