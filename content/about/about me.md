@@ -1,11 +1,11 @@
 ---
-title: About me
+title: About Corvus
 date: 2024-11-30
 draft: false
 tags:
   - personal
 ---
-
+![My face without a beard](https://tashikomaaa.github.io/corvusblog/images/me.png)
 Welcome in my blog !
 
 With over 8 years of experience in IT development, Aldwin embodies the passion and technical expertise at the heart of Assoverse. Officially a developer for eight years, his journey began much earlier, at the age of 13, when he began creating software.
