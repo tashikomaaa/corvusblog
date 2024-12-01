@@ -48,7 +48,7 @@ for filename in os.listdir(posts_dir):
         # Étape 2 : Trouver tous les liens d'images au format [[image.png]]
         images = re.findall(r'\[\[([^]]+\.(?:png|jpg|jpeg|gif))\]\]', content)
         if not images:
-            info(f"Aucune image avec le format [[image]] trouvée dans {filename}.")
+            info(f"Aucune image avec le format [[image.png]] trouvée dans {filename}.")
             continue  # Passer au fichier suivant si aucune image à remplacer
 
         # Copie du contenu d'origine pour comparaison
