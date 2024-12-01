@@ -21,14 +21,7 @@
   ],
   "rightRibbon": [],
   "titleBar": [],
-  "statusBar": [
-    {
-      "id": "obsidian-shellcommands:shell-command-1h4b50afkh",
-      "icon": "lucide-upload-cloud",
-      "name": "Shell commands: Execute: updates",
-      "mode": "any"
-    }
-  ],
+  "statusBar": [],
   "pageHeader": [
     {
       "id": "obsidian-shellcommands:shell-command-1h4b50afkh",
