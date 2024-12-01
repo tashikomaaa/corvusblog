@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/1 .Ready to create my own PM2 clone.md",
+                "file": "posts/First post.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 .Ready to create my own PM2 clone"
+              "title": "First post"
             }
           }
         ]
@@ -163,11 +163,11 @@
   },
   "active": "2f1c48bec693a4e5",
   "lastOpenFiles": [
-    "posts/First post.md",
     "posts/2 .On the road again.md",
+    "posts/1 .Ready to create my own PM2 clone.md",
+    "posts/First post.md",
     "Welcome.md",
     "logo.png",
-    "posts/1 .Ready to create my own PM2 clone.md",
     "posts",
     "about/about me.md",
     "about"

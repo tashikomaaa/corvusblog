@@ -6,7 +6,7 @@ tags:
   - tech
 ---
 
-Welcome in my blog !
+Welcome in my tiny blog !
 
 Here i want to put down some ideas, work, and just some thinking to be able to get it saved.
 
@@ -16,7 +16,7 @@ Hope you find it interesting !
 
 I shurely switch time to time from english to french...
 
-I'm french so sorry for my bad english...
+I'm french so sorry for my bad english, but i don't want to use some automatic traduction. So you are gonna have some "franglish" for the rest of the blog.
 
 
 
