@@ -1,44 +1,56 @@
 #!/bin/bash
 
-# Obtenir la date et l'heure actuelles
+# Couleurs pour les messages
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RESET='\033[0m'
+
+# Fonction pour afficher les messages colorés
+info() { echo -e "${BLUE}[INFO]${RESET} $1"; }
+success() { echo -e "${GREEN}[SUCCESS]${RESET} $1"; }
+error() { echo -e "${RED}[ERROR]${RESET} $1"; }
+warning() { echo -e "${YELLOW}[WARNING]${RESET} $1"; }
+
+# Obtenir la date et l'heure actuelle
 dt=$(date '+%d/%m/%Y %H:%M:%S')
-echo "[INFO] Début du script à $dt"
+info "Date et heure actuelle : $dt"
 
 # Exécuter le script Python
-echo "[INFO] Exécution du script Python (images.py)..."
+info "Exécution du script Python 'images.py'..."
 if python3 images.py; then
-    echo "[SUCCESS] Script Python exécuté avec succès."
+    success "Script Python exécuté avec succès."
 else
-    echo "[ERROR] Échec de l'exécution du script Python." >&2
+    error "Échec de l'exécution du script Python."
     exit 1
 fi
 
-# Ajouter les modifications à Git
-echo "[INFO] Ajout des modifications au suivi Git..."
+# Ajouter les fichiers au dépôt Git
+info "Ajout des fichiers au suivi Git..."
 if git add . > /dev/null 2>&1; then
-    echo "[SUCCESS] Modifications ajoutées avec succès."
+    success "Fichiers ajoutés avec succès."
 else
-    echo "[ERROR] Échec de l'ajout des modifications à Git." >&2
+    error "Échec lors de l'ajout des fichiers à Git."
     exit 1
 fi
 
-# Commit avec un message incluant la date et l'heure
-echo "[INFO] Création d'un commit avec le message : 'update new version - $dt'"
+# Commit avec message
+info "Commit des modifications avec le message : 'update new version - $dt'..."
 if git commit -m "update new version - $dt" > /dev/null 2>&1; then
-    echo "[SUCCESS] Commit créé avec succès."
+    success "Commit réalisé avec succès."
 else
-    echo "[ERROR] Échec de la création du commit." >&2
+    error "Échec lors du commit."
     exit 1
 fi
 
-# Push des modifications vers le dépôt distant
-echo "[INFO] Envoi des modifications au dépôt distant..."
+# Pousser les modifications vers le dépôt distant
+info "Poussée des modifications vers le dépôt distant..."
 if git push > /dev/null 2>&1; then
-    echo "[SUCCESS] Modifications poussées avec succès."
+    success "Modifications poussées avec succès."
 else
-    echo "[ERROR] Échec de l'envoi des modifications au dépôt distant." >&2
+    error "Échec lors de la poussée des modifications."
     exit 1
 fi
 
-# Fin du script
-echo "[INFO] Script terminé avec succès."
+success "Script terminé avec succès."

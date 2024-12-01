@@ -2,35 +2,69 @@ import os
 import re
 import shutil
 
-# Paths
+# Chemins
 posts_dir = "/home/corvus/corvusblog/content/posts"
 attachments_dir = "/home/corvus/corvusblog/content"
 static_images_dir = "/home/corvus/corvusblog/static/images/"
 
-# Step 1: Process each markdown file in the posts directory
+# Couleurs ANSI
+RESET = "\033[0m"
+RED = "\033[0;31m"
+GREEN = "\033[0;32m"
+BLUE = "\033[0;34m"
+YELLOW = "\033[1;33m"
+
+# Fonctions pour affichage coloré
+def info(message):
+    print(f"{BLUE}[INFO]{RESET} {message}")
+
+def success(message):
+    print(f"{GREEN}[SUCCESS]{RESET} {message}")
+
+def warning(message):
+    print(f"{YELLOW}[WARNING]{RESET} {message}")
+
+def error(message):
+    print(f"{RED}[ERROR]{RESET} {message}")
+
+# Vérification que les répertoires existent
+if not os.path.exists(posts_dir):
+    error(f"Répertoire introuvable : {posts_dir}")
+    raise FileNotFoundError(f"Répertoire introuvable : {posts_dir}")
+
+if not os.path.exists(static_images_dir):
+    os.makedirs(static_images_dir)
+    info(f"Répertoire créé : {static_images_dir}")
+
+# Étape 1 : Traitement de chaque fichier Markdown
 for filename in os.listdir(posts_dir):
     if filename.endswith(".md"):
         filepath = os.path.join(posts_dir, filename)
-        
-        with open(filepath, "r") as file:
+        info(f"Traitement du fichier : {filename}")
+
+        with open(filepath, "r", encoding="utf-8") as file:
             content = file.read()
-        
-        # Step 2: Find all image links in the format ![Image Description](/images/Pasted%20image%20...%20.png)
-        images = re.findall(r'\[\[([^]]*\.png)\]\]', content)
-        
-        # Step 3: Replace image links and ensure URLs are correctly formatted
+
+        # Étape 2 : Trouver tous les liens d'images au format [[image.png]] ou ![Description](path)
+        images = re.findall(r'\[\[([^]]+\.(?:png|jpg|jpeg|gif))\]\]', content)
+
+        # Étape 3 : Remplacement des liens d'images
         for image in images:
-            # Prepare the Markdown-compatible link with %20 replacing spaces
+            # Préparer le lien Markdown compatible
             markdown_image = f"![Image Description](https://tashikomaaa.github.io/corvusblog/images/{image.replace(' ', '%20')})"
             content = content.replace(f"[[{image}]]", markdown_image)
-            
-            # Step 4: Copy the image to the Hugo static/images directory if it exists
+
+            # Étape 4 : Copier l'image dans le répertoire static/images
             image_source = os.path.join(attachments_dir, image)
             if os.path.exists(image_source):
                 shutil.copy(image_source, static_images_dir)
+                success(f"Image copiée : {image}")
+            else:
+                warning(f"Image introuvable : {image_source}")
 
-        # Step 5: Write the updated content back to the markdown file
-        with open(filepath, "w") as file:
+        # Étape 5 : Mise à jour du contenu dans le fichier Markdown
+        with open(filepath, "w", encoding="utf-8") as file:
             file.write(content)
+        success(f"Fichier mis à jour : {filename}")
 
-print("Markdown files processed and images copied successfully.")
+success("Tous les fichiers Markdown ont été traités.")
