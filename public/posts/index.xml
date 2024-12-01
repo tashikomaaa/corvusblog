@@ -1,24 +1,260 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Corvus Blog</title>
-    <link>http://localhost:1313/corvusblog/posts/</link>
-    <description>Recent content in Posts on Corvus Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/corvusblog/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>corvusblog</title>
-      <link>http://localhost:1313/corvusblog/posts/test-posts/</link>
-      <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/corvusblog/posts/test-posts/</guid>
-      <description>&lt;p&gt;Welcome in my blog !&lt;/p&gt;
-&lt;p&gt;Here i want to put down some ideas, work, and just some thinking to be able to get it saved&lt;/p&gt;</description>
-      <content>&lt;p&gt;Welcome in my blog !&lt;/p&gt;
-&lt;p&gt;Here i want to put down some ideas, work, and just some thinking to be able to get it saved&lt;/p&gt;
-</content>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Corvus Blog</title><link>https://tashikomaaa.github.io/corvusblog/posts/</link><description>Recent content in Posts on Corvus Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tashikomaaa.github.io/corvusblog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>corvusblog</title><link>https://tashikomaaa.github.io/corvusblog/posts/first-post/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://tashikomaaa.github.io/corvusblog/posts/first-post/</guid><description>&lt;p>Welcome in my tiny blog !&lt;/p>
+&lt;p>Here i want to put down some ideas, work, and just some thinking to be able to get it saved.&lt;/p>
+&lt;p>i&amp;rsquo;m gonna put here some of my work process, about some little tool i create or some trouble on my business.&lt;/p>
+&lt;p>Hope you find it interesting !&lt;/p>
+&lt;p>I shurely switch time to time from english to french&amp;hellip;&lt;/p>
+&lt;p>I&amp;rsquo;m french so sorry for my bad english, but i don&amp;rsquo;t want to use some automatic traduction. So you are gonna have some &amp;ldquo;franglish&amp;rdquo; for the rest of the blog.&lt;/p></description><content>&lt;p>Welcome in my tiny blog !&lt;/p>
+&lt;p>Here i want to put down some ideas, work, and just some thinking to be able to get it saved.&lt;/p>
+&lt;p>i&amp;rsquo;m gonna put here some of my work process, about some little tool i create or some trouble on my business.&lt;/p>
+&lt;p>Hope you find it interesting !&lt;/p>
+&lt;p>I shurely switch time to time from english to french&amp;hellip;&lt;/p>
+&lt;p>I&amp;rsquo;m french so sorry for my bad english, but i don&amp;rsquo;t want to use some automatic traduction. So you are gonna have some &amp;ldquo;franglish&amp;rdquo; for the rest of the blog.&lt;/p></content></item><item><title>Tasky - here we go !</title><link>https://tashikomaaa.github.io/corvusblog/posts/2-.on-the-road-again/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://tashikomaaa.github.io/corvusblog/posts/2-.on-the-road-again/</guid><description>&lt;p>On y va on se lance pour de bon !&lt;/p>
+&lt;p>On se lance dans les details de la création de Tasky, que tu peut retrouver &lt;a href="https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone">ICI Tasky&lt;/a>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a href="#initialization-clijs" title="Initialization cli.js">Initialization cli.js&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#tasky-start" title="Tasky start">tasky start&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#tasky-stop" title="Tasky stop">tasky stop&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>On commence donc par créer le ficher qui va gérer les commandes reçu.&lt;/p>
+&lt;p>donc on créer le dossier du projet:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir tasky
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd tasky
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>on créer ensuite le dossier pour les scripts&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd src
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>et finalement le fichier pour les commandes cli&lt;/p></description><content>&lt;p>On y va on se lance pour de bon !&lt;/p>
+&lt;p>On se lance dans les details de la création de Tasky, que tu peut retrouver &lt;a href="https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone">ICI Tasky&lt;/a>&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a href="#initialization-clijs" title="Initialization cli.js">Initialization cli.js&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#tasky-start" title="Tasky start">tasky start&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#tasky-stop" title="Tasky stop">tasky stop&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>On commence donc par créer le ficher qui va gérer les commandes reçu.&lt;/p>
+&lt;p>donc on créer le dossier du projet:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir tasky
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd tasky
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>on créer ensuite le dossier pour les scripts&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir src
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd src
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>et finalement le fichier pour les commandes cli&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>touch cli.js
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Maintenant on va devoir ajouter quelque librairies pour pouvoir faire ce que l&amp;rsquo;on veut&lt;/p>
+&lt;p>on va avoir besoin de:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.npmjs.com/package/commander">Commander&lt;/a> solution pour les script node en cli&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/chalk">chalk&lt;/a> Pour mettre un peu de couleurs dans nos vies !&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/pidusage">pidusage&lt;/a> Pour connaitre le pourcentage d&amp;rsquo;utilisation du cpu pour chaque process&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>on va donc installer tout ça !&lt;/p>
+&lt;hr>
+&lt;p>on va initier le projet et installer les dependences:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>npm init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm install commander chalk pidusage
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="initialization-clijs">Initialization cli.js&lt;/h2>
+&lt;p>On va enfin pouvoir commencer !&lt;/p>
+&lt;p>On va donc ouvrir le fichier &lt;code>cli.js&lt;/code>, dans lequel on va ajouter la gestion des commandes lancer depuis le terminal.&lt;/p>
+&lt;p>&lt;code>cli.js&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/usr/bin/env node
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">Command&lt;/span> } &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;commander&amp;#39;&lt;/span>; &lt;span style="color:#75715e">// Import commander for the cli command gestion
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;fs&amp;#39;&lt;/span>; &lt;span style="color:#75715e">// Import fs for files gestion
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">chalk&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;chalk&amp;#39;&lt;/span>; &lt;span style="color:#75715e">// Import chalk for colorization
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">program&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Command&lt;/span>(); &lt;span style="color:#75715e">// Initialization of a new Command instance
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">code for the command we goind to details down there
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">**/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">program&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">process&lt;/span>.&lt;span style="color:#a6e22e">argv&lt;/span>); &lt;span style="color:#75715e">// Get all the arguments of the cli command
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="tasky-start">tasky start&lt;/h2>
+&lt;p>On va donc rajouter dans notre script la gestion des commandes, on commence par la command&lt;/p>
+&lt;p>&lt;code>tasky start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&lt;/code>&lt;/p>
+&lt;p>&lt;code>cli.js&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Command to start a new process
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">program&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">command&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">description&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Start a new process&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">action&lt;/span>((&lt;span style="color:#a6e22e">name&lt;/span>, &lt;span style="color:#a6e22e">script&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">cyan&lt;/span>(&lt;span style="color:#e6db74">`Starting process: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> with script &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">script&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">startProcess&lt;/span>(&lt;span style="color:#a6e22e">name&lt;/span>, &lt;span style="color:#a6e22e">script&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">red&lt;/span>(&lt;span style="color:#e6db74">`Error starting process: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">error&lt;/span>.&lt;span style="color:#a6e22e">message&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> });
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Comme on peut le voir ici on ajoute en premier la commande:
+&lt;code>.command('start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;')&lt;/code>
+Qui avec la description:
+&lt;code>.description('Start a new process')&lt;/code>
+Ajoute une ligne dans le manuel de notre script.
+Elle prend donc comme arguments le nom du process et le script que l&amp;rsquo;on va lancer.&lt;/p>
+&lt;hr>
+&lt;h2 id="tasky-stop">tasky stop&lt;/h2>
+&lt;p>&lt;code>tasky stop &amp;lt;pid&amp;gt;&lt;/code>&lt;/p>
+&lt;p>&lt;code>cli.js&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Command to stop a process by PID
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">program&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">command&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;stop &amp;lt;pid | name&amp;gt;&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">description&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Stop a process by PID or name&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">action&lt;/span>((&lt;span style="color:#a6e22e">pid&lt;/span>) =&amp;gt; {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">yellow&lt;/span>(&lt;span style="color:#e6db74">`Stopping process with PID: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">pid&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">stopProcess&lt;/span>(Number(&lt;span style="color:#a6e22e">pid&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">red&lt;/span>(&lt;span style="color:#e6db74">`Error stopping process: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">error&lt;/span>.&lt;span style="color:#a6e22e">message&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> });
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Comme on peut le voir ici on ajoute en premier la commande:
+&lt;code>.command('stop &amp;lt;pid | name&amp;gt;')&lt;/code>
+Qui avec la description:
+&lt;code>.description('Stop a process by PID or name')&lt;/code>
+Ajoute une ligne dans le manuel de notre script.
+Elle prend donc comme arguments le pid ou le nom du process a arreter&lt;/p></content></item><item><title>Tasky - what i want</title><link>https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone/</guid><description>&lt;p>&lt;img alt="Image Description" src="https://tashikomaaa.github.io/corvusblog/images/logo.png">&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>Tasky&lt;/strong> is a lightweight process manager for &lt;a href="https://nodejs.org/en">Nodejs&lt;/a> applications and other processes. With an intuitive command-line interface, it helps you easily manage, monitor, and track your processes in real time. Ideal for simple use cases and smaller applications.&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a href="#features" title="Features">🚀 Features&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#installation" title="Installation">🛠️ Installation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#usage">📋 Usage&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#development">🧑‍💻 Development&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#roadmap">🗺️ Roadmap&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#contributing">🤝 Contributing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#license">📝 License&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#acknowledgments">💬 Acknowledgments&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#contact">📬 Contact&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Start, Stop, and Manage Processes&lt;/strong>: Control your applications with simple commands.&lt;/li>
+&lt;li>&lt;strong>Real-Time Resource Monitoring&lt;/strong>: Track CPU and memory usage on the fly.&lt;/li>
+&lt;li>&lt;strong>Live Log Viewing&lt;/strong>: View real-time logs of your processes.&lt;/li>
+&lt;li>&lt;strong>Persistent Process Information&lt;/strong>: Logs and process data are saved for later reference.&lt;/li>
+&lt;li>&lt;strong>Lightweight &amp;amp; Intuitive&lt;/strong>: Simple, fast, and easy-to-use tool for process management.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;h3 id="clone-the-repository">Clone the Repository&lt;/h3>
+&lt;p>To get started, clone the repository:&lt;/p></description><content>&lt;p>&lt;img alt="Image Description" src="https://tashikomaaa.github.io/corvusblog/images/logo.png">&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>Tasky&lt;/strong> is a lightweight process manager for &lt;a href="https://nodejs.org/en">Nodejs&lt;/a> applications and other processes. With an intuitive command-line interface, it helps you easily manage, monitor, and track your processes in real time. Ideal for simple use cases and smaller applications.&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a href="#features" title="Features">🚀 Features&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#installation" title="Installation">🛠️ Installation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#usage">📋 Usage&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#development">🧑‍💻 Development&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#roadmap">🗺️ Roadmap&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#contributing">🤝 Contributing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#license">📝 License&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#acknowledgments">💬 Acknowledgments&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#contact">📬 Contact&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Start, Stop, and Manage Processes&lt;/strong>: Control your applications with simple commands.&lt;/li>
+&lt;li>&lt;strong>Real-Time Resource Monitoring&lt;/strong>: Track CPU and memory usage on the fly.&lt;/li>
+&lt;li>&lt;strong>Live Log Viewing&lt;/strong>: View real-time logs of your processes.&lt;/li>
+&lt;li>&lt;strong>Persistent Process Information&lt;/strong>: Logs and process data are saved for later reference.&lt;/li>
+&lt;li>&lt;strong>Lightweight &amp;amp; Intuitive&lt;/strong>: Simple, fast, and easy-to-use tool for process management.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;h3 id="clone-the-repository">Clone the Repository&lt;/h3>
+&lt;p>To get started, clone the repository:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone https://github.com/tashikomaaa/tasky.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd tasky
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
+&lt;p>Install the necessary dependencies with npm:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash install.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="usage">Usage&lt;/h2>
+&lt;p>Start Tasky with Node.js:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky &amp;lt;command&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="available-commands">Available Commands&lt;/h3>
+&lt;h4 id="start-a-process">&lt;strong>Start a Process&lt;/strong>&lt;/h4>
+&lt;p>Launch a new process by specifying its name and script path:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky start my-app ./app.js
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="stop-a-process">&lt;strong>Stop a Process&lt;/strong>&lt;/h4>
+&lt;p>Terminate a process by its PID:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky stop &amp;lt;pid&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky stop &lt;span style="color:#ae81ff">12345&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="list-running-processes">&lt;strong>List Running Processes&lt;/strong>&lt;/h4>
+&lt;p>List all currently running processes:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example Output:&lt;/p>
+&lt;pre tabindex="0">&lt;code>Running processes:
+- my-app (PID: 12345, Script: ./app.js)
+- another-app (PID: 67890, Script: ./server.js)
+&lt;/code>&lt;/pre>&lt;h4 id="monitor-a-process">&lt;strong>Monitor a Process&lt;/strong>&lt;/h4>
+&lt;p>Monitor CPU and memory usage for a specific process:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky monitor &amp;lt;pid&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example Output:&lt;/p>
+&lt;pre tabindex="0">&lt;code>PID 12345 - CPU: 10.5%, Memory: 32.64 MB
+&lt;/code>&lt;/pre>&lt;h4 id="view-real-time-logs">&lt;strong>View Real-Time Logs&lt;/strong>&lt;/h4>
+&lt;p>See the real-time logs for a process:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky logs &amp;lt;pid&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky logs &lt;span style="color:#ae81ff">12345&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="development">Development&lt;/h2>
+&lt;h3 id="project-structure">Project Structure&lt;/h3>
+&lt;pre tabindex="0">&lt;code>tasky/
+├── logs/ # Logs for processes
+├── src/ # Source code
+│ ├── manager.js # Process management logic
+│ ├── monitor.js # Monitoring logic
+│ └── cli.js # Command-line interface
+├── package.json # Project dependencies and metadata
+└── README.md # Documentation
+&lt;/code>&lt;/pre>&lt;h3 id="add-new-features">Add New Features&lt;/h3>
+&lt;ul>
+&lt;li>Modify &lt;code>src/cli.js&lt;/code> to add new commands.&lt;/li>
+&lt;li>Implement new functionality in &lt;code>src/manager.js&lt;/code> or a separate module.&lt;/li>
+&lt;li>Follow the modular design for maintainability.&lt;/li>
+&lt;/ul>
+&lt;h3 id="testing">Testing&lt;/h3>
+&lt;p>To test, run multiple commands and observe logs, resource usage, and process management behavior.&lt;/p>
+&lt;hr>
+&lt;h2 id="roadmap">Roadmap&lt;/h2>
+&lt;h3 id="planned-features">Planned Features&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Clustering Support&lt;/strong>: Scale applications across multiple CPU cores.&lt;/li>
+&lt;li>&lt;strong>Log Filtering &amp;amp; Search&lt;/strong>: Advanced log filtering and search capabilities.&lt;/li>
+&lt;li>&lt;strong>Docker Integration&lt;/strong>: Manage processes running inside Docker containers.&lt;/li>
+&lt;li>&lt;strong>Remote API&lt;/strong>: API support for managing processes remotely.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="contributing">Contributing&lt;/h2>
+&lt;p>We welcome contributions! To contribute:&lt;/p>
+&lt;ol>
+&lt;li>Fork the repository.&lt;/li>
+&lt;li>Create a new branch for your feature or bugfix.&lt;/li>
+&lt;li>Open a pull request with a detailed description of your changes.&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>This project is licensed under the MIT License. See the &lt;a href="LICENSE">LICENSE&lt;/a> file for more details.&lt;/p>
+&lt;hr>
+&lt;h2 id="acknowledgments">Acknowledgments&lt;/h2>
+&lt;p>Inspired by &lt;a href="https://pm2.keymetrics.io/">PM2&lt;/a>, &lt;strong>Tasky&lt;/strong> is a lightweight alternative for managing Node.js processes.&lt;/p>
+&lt;hr>
+&lt;h2 id="contact">Contact&lt;/h2>
+&lt;p>For questions or feedback, feel free to contact &lt;a href="mailto:tashikomaa@gmail.com">Aldwin Moutarlier&lt;/a>.&lt;/p>
+&lt;hr></content></item></channel></rss>
