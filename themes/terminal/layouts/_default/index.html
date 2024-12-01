@@ -4,11 +4,15 @@
   {{ .Content }}
 </div>
 {{ end }}
-<form id="filter-form" onsubmit="return filterPosts()">
-  <label for="date-filter">Filtrer par date :</label>
-  <input type="date" id="date-filter" name="date">
+<form id="sort-form" onsubmit="return sortPosts()">
+  <label for="sort-order">Trier par date :</label>
+  <select id="sort-order" name="order">
+      <option value="asc">Croissant</option>
+      <option value="desc">Décroissant</option>
+  </select>
   <button type="submit">Appliquer</button>
 </form>
+
 
 <div class="posts">
   {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim
