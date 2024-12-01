@@ -45,8 +45,14 @@ for filename in os.listdir(posts_dir):
         with open(filepath, "r", encoding="utf-8") as file:
             content = file.read()
 
-        # Étape 2 : Trouver tous les liens d'images au format [[image.png]] ou ![Description](path)
+        # Étape 2 : Trouver tous les liens d'images au format [[image.png]]
         images = re.findall(r'\[\[([^]]+\.(?:png|jpg|jpeg|gif))\]\]', content)
+        if not images:
+            info(f"Aucune image avec le format [[image]] trouvée dans {filename}.")
+            continue  # Passer au fichier suivant si aucune image à remplacer
+
+        # Copie du contenu d'origine pour comparaison
+        original_content = content
 
         # Étape 3 : Remplacement des liens d'images
         for image in images:
@@ -62,9 +68,12 @@ for filename in os.listdir(posts_dir):
             else:
                 warning(f"Image introuvable : {image_source}")
 
-        # Étape 5 : Mise à jour du contenu dans le fichier Markdown
-        with open(filepath, "w", encoding="utf-8") as file:
-            file.write(content)
-        success(f"Fichier mis à jour : {filename}")
+        # Étape 5 : Vérifier si le fichier a été modifié avant d'écrire
+        if content != original_content:
+            with open(filepath, "w", encoding="utf-8") as file:
+                file.write(content)
+            success(f"Fichier mis à jour : {filename}")
+        else:
+            info(f"Aucune modification nécessaire pour le fichier : {filename}")
 
 success("Tous les fichiers Markdown ont été traités.")
