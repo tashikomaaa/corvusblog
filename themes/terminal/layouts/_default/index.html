@@ -14,7 +14,7 @@
     {{ end }}
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
-    {{ range $paginator.Pages.ByDate }}
+    {{ range $paginator.Pages.ByDate.Reverse }}
       <article class="post on-list">
         <h2 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
