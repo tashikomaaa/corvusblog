@@ -1,0 +1,6 @@
+{
+  "timeFormat": "HH:mm",
+  "timePrefixFormat": "edit: ",
+  "timeSuffixFormat": "",
+  "regexForTime": "\\d{2}:\\d{2}"
+}
