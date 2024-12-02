@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/daily notes/02-12-2024.md",
+                "file": "posts/2 .On the road again.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02-12-2024"
+              "title": "2 .On the road again"
             }
           }
         ]
@@ -161,15 +161,15 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "f530b068888c8196",
+  "active": "ac0a88ea2155eb83",
   "lastOpenFiles": [
+    "posts/1 .Ready to create my own PM2 clone.md",
+    "posts/2 .On the road again.md",
+    "posts/daily notes/02-12-2024.md",
     "posts/daily notes",
     "posts/First post.md",
-    "posts/daily notes/02-12-2024.md",
     "posts/2024-12-02.md",
     "Template.md",
-    "posts/2 .On the road again.md",
-    "posts/1 .Ready to create my own PM2 clone.md",
     "2024-11-30.md",
     "{{<.md",
     "Welcome.md",
