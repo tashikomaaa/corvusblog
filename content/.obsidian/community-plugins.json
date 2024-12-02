@@ -2,5 +2,6 @@
   "theme-picker",
   "cmdr",
   "obsidian-shellcommands",
-  "console"
+  "console",
+  "code-emitter"
 ]
