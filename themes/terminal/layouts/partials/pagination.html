@@ -1,12 +1,12 @@
 <div class="pagination">
   <div class="pagination__buttons">
-    {{ if .Paginator.HasPrev }}
+    {{ if .Paginator.ByDate.Reverse.HasPrev }}
       <a href="{{ .Paginator.Prev.URL }}" class="button prev">
         <span class="button__icon">←</span>
         <span class="button__text">{{ $.Site.Params.newerPosts | default "Newer posts" }}</span>
       </a>
     {{ end }}
-    {{ if .Paginator.HasNext }}
+    {{ if .Paginator.ByDate.Reverse.HasNext }}
       <a href="{{ .Paginator.Next.URL }}" class="button next">
         <span class="button__text">{{ $.Site.Params.olderPosts | default "Older posts" }}</span>
         <span class="button__icon">→</span>
