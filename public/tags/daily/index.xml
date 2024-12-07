@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daily on Corvus Blog</title>
+    <link>http://localhost:1313/corvusblog/tags/daily/</link>
+    <description>Recent content in Daily on Corvus Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/corvusblog/tags/daily/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>first daily</title>
+      <link>http://localhost:1313/corvusblog/posts/daily-notes/02-12-2024/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/corvusblog/posts/daily-notes/02-12-2024/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;0600&#34;&gt;06:00&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Hello !&lt;/p&gt;
+&lt;p&gt;Je réfléchis sérieusement à l&amp;rsquo;idée de commencer à poster quotidiennement, mais une question me trotte dans la tête : à quel moment de la journée devrais-je publier mes posts ? J&amp;rsquo;hésite encore entre le matin et le soir, car les deux options ont leurs avantages.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;un côté, poster le soir me permettrait de faire un retour complet sur ma journée. Ce serait l&amp;rsquo;occasion de revenir sur ce que j&amp;rsquo;ai accompli, mais aussi sur les éventuels points bloquants ou les difficultés rencontrées. Cela donnerait un aspect récapitulatif et analytique à mes publications.&lt;/p&gt;</description>
+      <content>&lt;hr&gt;
+&lt;h2 id=&#34;0600&#34;&gt;06:00&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Hello !&lt;/p&gt;
+&lt;p&gt;Je réfléchis sérieusement à l&amp;rsquo;idée de commencer à poster quotidiennement, mais une question me trotte dans la tête : à quel moment de la journée devrais-je publier mes posts ? J&amp;rsquo;hésite encore entre le matin et le soir, car les deux options ont leurs avantages.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;un côté, poster le soir me permettrait de faire un retour complet sur ma journée. Ce serait l&amp;rsquo;occasion de revenir sur ce que j&amp;rsquo;ai accompli, mais aussi sur les éventuels points bloquants ou les difficultés rencontrées. Cela donnerait un aspect récapitulatif et analytique à mes publications.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;un autre côté, poster le matin offre un tout autre bénéfice : celui de faire le point sur les tâches à venir. Cela me permettrait de poser les bases de ma journée, d&amp;rsquo;organiser mes idées et de me projeter sur ce que je dois accomplir. Une sorte de plan d&amp;rsquo;action écrit, en quelque sorte.&lt;/p&gt;
+&lt;p&gt;Et c&amp;rsquo;est là que se pose le dilemme : dois-je utiliser ces posts pour faire le bilan de ma journée ou, au contraire, pour anticiper et préparer les choses à venir ?&lt;/p&gt;
+&lt;p&gt;Finalement, je pense qu’une bonne solution pour commencer serait de poster le matin, avec une approche évolutive. En d&amp;rsquo;autres termes, je publierais un post initial en début de journée, dans lequel je pourrais revenir et ajouter des mises à jour au fil des heures. Cela me permettrait de construire une sorte de &amp;ldquo;timeline&amp;rdquo; qui retrace l&amp;rsquo;évolution de ma journée et, en même temps, de documenter la résolution des éventuels points bloquants en temps réel.&lt;/p&gt;
+&lt;p&gt;Ce qui est sûr, c’est que le vrai défi ne résidera pas dans le choix du moment de publication, mais bien dans ma capacité à tenir cette routine dans la durée. Je sais que ce sera probablement la partie la plus difficile.&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;ailleurs, j&amp;rsquo;ai décidé d&amp;rsquo;abandonner l&amp;rsquo;anglais pour mes publications quotidiennes. Je me sens beaucoup plus à l&amp;rsquo;aise pour écrire en français dans ce contexte. Cela dit, je continuerai à utiliser l&amp;rsquo;anglais pour les posts techniques, où cette langue est souvent plus adaptée et universelle.&lt;/p&gt;
+&lt;p&gt;Bref, on verra bien comment tout cela évolue. C’est un nouveau défi que je me lance, et je suis curieux de voir où il me mènera !&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2304&#34;&gt;23:04&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Aujourd&amp;rsquo;hui, j&amp;rsquo;ai dû me pencher sur quelques ajustements nécessaires pour l&amp;rsquo;un des outils que nous utilisons dans le cadre de &lt;a href=&#34;https://assoverse.com&#34;&gt;Assoverse&lt;/a&gt;.
+Plus précisément, il fallait que j&amp;rsquo;ajoute, et cela rapidement (idéalement avant demain), une fonctionnalité permettant de gérer les formulaires d&amp;rsquo;inscription incomplets.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;idée derrière cette mise à jour est simple :
+permettre aux utilisateurs de laisser un formulaire en attente temporairement.
+Par exemple, lorsqu&amp;rsquo;un donateur manque certaines informations essentielles, comme son RIB, nous devons pouvoir mettre de côté son bulletin tout en attendant de le recontacter pour compléter les informations manquantes.&lt;/p&gt;
+&lt;p&gt;Le principal défi que j&amp;rsquo;ai rencontré est que je ne souhaitais pas, dans un premier temps, sauvegarder en base de données des formulaires incomplets.
+Cela me semblait peu propre et potentiellement risqué.
+Cependan je me suis rendu compte que c&amp;rsquo;était finalement la solution la plus simple et la plus efficace.&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;ai donc décidé d&amp;rsquo;enregistrer les bulletins incomplets en base de données, mais en ajoutant un indicateur spécifique, un &lt;em&gt;flag&lt;/em&gt;, qui permet de déterminer si un bulletin est complet ou non. Voici à quoi cela ressemble en pratique dans le modèle :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;incomplete:&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Boolean&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Grâce à ce flag, je peux maintenant filtrer les bulletins directement dans la liste.
+Cela me permet de repérer facilement les formulaires incomplets.
+Lorsque l&amp;rsquo;utilisateur clique sur une carte correspondant à un bulletin incomplet, il est automatiquement redirigé vers le formulaire concerné, avec les données déjà partiellement remplies.&lt;/p&gt;
+&lt;p&gt;Cette solution me semble à la fois simple et pratique pour gérer ces cas particuliers. Elle offre également une certaine flexibilité pour améliorer encore l&amp;rsquo;outil à l&amp;rsquo;avenir si besoin.&lt;/p&gt;
+&lt;p&gt;Bref tout ça mis en place, testé et deployé, je vais donc me coucher avec Le seigneur des anneaux en fond et ma petite Huginn contre moi !&lt;/p&gt;
+&lt;p&gt;ps: Je ne peux pas mettre d&amp;rsquo;images ici je vous la partagerais dans un post une prochaine fois ;)&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Me revoilà !</title>
+      <link>http://localhost:1313/corvusblog/posts/daily-notes/07-12-2024/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/corvusblog/posts/daily-notes/07-12-2024/</guid>
+      <description>&lt;h2 id=&#34;hello&#34;&gt;Hello&lt;/h2&gt;
+&lt;p&gt;Desolé pour cette absence mais j&amp;rsquo;ai eu pas mal de choses à gérer ces derniers jours.
+En vrai j&amp;rsquo;ai surtout vraiment beaucoup de mal à me tenir à une routine.&lt;/p&gt;
+&lt;p&gt;Il faudrait que je trouve une méthode pour m&amp;rsquo;aider à me fixer sur cette routine.
+J&amp;rsquo;aime beaucoup écrire mais je n&amp;rsquo;arrive pas à prendre le temps de le faire.&lt;/p&gt;
+&lt;p&gt;Bref, rien de bien nouveau, quelques petits fix sur argos, acteon et mon api, mais en soit pas beaucoup de dev, au vu du fait que je n&amp;rsquo;ai pas de roadmap ou de features présices à développer c&amp;rsquo;est difficile de me lancer vraiment sur de nouvelle smodification sur mes outils.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;hello&#34;&gt;Hello&lt;/h2&gt;
+&lt;p&gt;Desolé pour cette absence mais j&amp;rsquo;ai eu pas mal de choses à gérer ces derniers jours.
+En vrai j&amp;rsquo;ai surtout vraiment beaucoup de mal à me tenir à une routine.&lt;/p&gt;
+&lt;p&gt;Il faudrait que je trouve une méthode pour m&amp;rsquo;aider à me fixer sur cette routine.
+J&amp;rsquo;aime beaucoup écrire mais je n&amp;rsquo;arrive pas à prendre le temps de le faire.&lt;/p&gt;
+&lt;p&gt;Bref, rien de bien nouveau, quelques petits fix sur argos, acteon et mon api, mais en soit pas beaucoup de dev, au vu du fait que je n&amp;rsquo;ai pas de roadmap ou de features présices à développer c&amp;rsquo;est difficile de me lancer vraiment sur de nouvelle smodification sur mes outils.&lt;/p&gt;
+&lt;p&gt;Et surtout vu que j&amp;rsquo;ai des clients qui utilise mes versions &amp;ldquo;stable&amp;rdquo; je voudrais attendre leurs retours, et leurs propositions pour pouvoir nourrir des idées de développement.&lt;/p&gt;
+&lt;p&gt;Bref voilà voilà, encore juste un petit daily, j&amp;rsquo;éspère revenir ici assez vite.&lt;/p&gt;
+&lt;p&gt;A la prochaine !&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

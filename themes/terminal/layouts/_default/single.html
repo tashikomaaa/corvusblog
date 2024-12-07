@@ -45,10 +45,10 @@
       </div>
     {{- end -}}
   </div>
-
+<!-- 
   {{ if eq .Type $.Site.Params.contentTypeName }}
-    {{ partial "posts_pagination.html" . }}
-  {{ end }}
+    {{ partial "posts_pagination.html" . }}&
+  {{ end }} -->
 
   {{ if not (.Params.hideComments | default false) }}
     {{ partial "comments.html" . }}

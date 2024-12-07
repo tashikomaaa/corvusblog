@@ -1,260 +1,473 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tech on Corvus Blog</title><link>https://tashikomaaa.github.io/corvusblog/tags/tech/</link><description>Recent content in Tech on Corvus Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tashikomaaa.github.io/corvusblog/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>corvusblog</title><link>https://tashikomaaa.github.io/corvusblog/posts/first-post/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://tashikomaaa.github.io/corvusblog/posts/first-post/</guid><description>&lt;p>Welcome in my tiny blog !&lt;/p>
-&lt;p>Here i want to put down some ideas, work, and just some thinking to be able to get it saved.&lt;/p>
-&lt;p>i&amp;rsquo;m gonna put here some of my work process, about some little tool i create or some trouble on my business.&lt;/p>
-&lt;p>Hope you find it interesting !&lt;/p>
-&lt;p>I shurely switch time to time from english to french&amp;hellip;&lt;/p>
-&lt;p>I&amp;rsquo;m french so sorry for my bad english, but i don&amp;rsquo;t want to use some automatic traduction. So you are gonna have some &amp;ldquo;franglish&amp;rdquo; for the rest of the blog.&lt;/p></description><content>&lt;p>Welcome in my tiny blog !&lt;/p>
-&lt;p>Here i want to put down some ideas, work, and just some thinking to be able to get it saved.&lt;/p>
-&lt;p>i&amp;rsquo;m gonna put here some of my work process, about some little tool i create or some trouble on my business.&lt;/p>
-&lt;p>Hope you find it interesting !&lt;/p>
-&lt;p>I shurely switch time to time from english to french&amp;hellip;&lt;/p>
-&lt;p>I&amp;rsquo;m french so sorry for my bad english, but i don&amp;rsquo;t want to use some automatic traduction. So you are gonna have some &amp;ldquo;franglish&amp;rdquo; for the rest of the blog.&lt;/p></content></item><item><title>Tasky - here we go !</title><link>https://tashikomaaa.github.io/corvusblog/posts/2-.on-the-road-again/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://tashikomaaa.github.io/corvusblog/posts/2-.on-the-road-again/</guid><description>&lt;p>On y va on se lance pour de bon !&lt;/p>
-&lt;p>On se lance dans les details de la création de Tasky, que tu peut retrouver &lt;a href="https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone">ICI Tasky&lt;/a>&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;a href="#initialization-clijs" title="Initialization cli.js">Initialization cli.js&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#tasky-start" title="Tasky start">tasky start&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#tasky-stop" title="Tasky stop">tasky stop&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;p>On commence donc par créer le ficher qui va gérer les commandes reçu.&lt;/p>
-&lt;p>donc on créer le dossier du projet:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir tasky
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd tasky
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>on créer ensuite le dossier pour les scripts&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir src
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd src
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>et finalement le fichier pour les commandes cli&lt;/p></description><content>&lt;p>On y va on se lance pour de bon !&lt;/p>
-&lt;p>On se lance dans les details de la création de Tasky, que tu peut retrouver &lt;a href="https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone">ICI Tasky&lt;/a>&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;a href="#initialization-clijs" title="Initialization cli.js">Initialization cli.js&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#tasky-start" title="Tasky start">tasky start&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#tasky-stop" title="Tasky stop">tasky stop&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;p>On commence donc par créer le ficher qui va gérer les commandes reçu.&lt;/p>
-&lt;p>donc on créer le dossier du projet:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir tasky
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd tasky
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>on créer ensuite le dossier pour les scripts&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>mkdir src
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd src
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>et finalement le fichier pour les commandes cli&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>touch cli.js
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Maintenant on va devoir ajouter quelque librairies pour pouvoir faire ce que l&amp;rsquo;on veut&lt;/p>
-&lt;p>on va avoir besoin de:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.npmjs.com/package/commander">Commander&lt;/a> solution pour les script node en cli&lt;/li>
-&lt;li>&lt;a href="https://www.npmjs.com/package/chalk">chalk&lt;/a> Pour mettre un peu de couleurs dans nos vies !&lt;/li>
-&lt;li>&lt;a href="https://www.npmjs.com/package/pidusage">pidusage&lt;/a> Pour connaitre le pourcentage d&amp;rsquo;utilisation du cpu pour chaque process&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;p>on va donc installer tout ça !&lt;/p>
-&lt;hr>
-&lt;p>on va initier le projet et installer les dependences:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>npm init
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm install commander chalk pidusage
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h2 id="initialization-clijs">Initialization cli.js&lt;/h2>
-&lt;p>On va enfin pouvoir commencer !&lt;/p>
-&lt;p>On va donc ouvrir le fichier &lt;code>cli.js&lt;/code>, dans lequel on va ajouter la gestion des commandes lancer depuis le terminal.&lt;/p>
-&lt;p>&lt;code>cli.js&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#!/usr/bin/env node
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> { &lt;span style="color:#a6e22e">Command&lt;/span> } &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;commander&amp;#39;&lt;/span>; &lt;span style="color:#75715e">// Import commander for the cli command gestion
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">fs&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;fs&amp;#39;&lt;/span>; &lt;span style="color:#75715e">// Import fs for files gestion
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">import&lt;/span> &lt;span style="color:#a6e22e">chalk&lt;/span> &lt;span style="color:#a6e22e">from&lt;/span> &lt;span style="color:#e6db74">&amp;#39;chalk&amp;#39;&lt;/span>; &lt;span style="color:#75715e">// Import chalk for colorization
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">program&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> &lt;span style="color:#a6e22e">Command&lt;/span>(); &lt;span style="color:#75715e">// Initialization of a new Command instance
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">code for the command we goind to details down there
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">**/&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">program&lt;/span>.&lt;span style="color:#a6e22e">parse&lt;/span>(&lt;span style="color:#a6e22e">process&lt;/span>.&lt;span style="color:#a6e22e">argv&lt;/span>); &lt;span style="color:#75715e">// Get all the arguments of the cli command
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h2 id="tasky-start">tasky start&lt;/h2>
-&lt;p>On va donc rajouter dans notre script la gestion des commandes, on commence par la command&lt;/p>
-&lt;p>&lt;code>tasky start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&lt;/code>&lt;/p>
-&lt;p>&lt;code>cli.js&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Command to start a new process
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">program&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">command&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&amp;#39;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">description&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Start a new process&amp;#39;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">action&lt;/span>((&lt;span style="color:#a6e22e">name&lt;/span>, &lt;span style="color:#a6e22e">script&lt;/span>) =&amp;gt; {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">cyan&lt;/span>(&lt;span style="color:#e6db74">`Starting process: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">name&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> with script &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">script&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">startProcess&lt;/span>(&lt;span style="color:#a6e22e">name&lt;/span>, &lt;span style="color:#a6e22e">script&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">red&lt;/span>(&lt;span style="color:#e6db74">`Error starting process: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">error&lt;/span>.&lt;span style="color:#a6e22e">message&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> });
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Comme on peut le voir ici on ajoute en premier la commande:
-&lt;code>.command('start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;')&lt;/code>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Corvus Blog</title>
+    <link>http://localhost:1313/corvusblog/tags/tech/</link>
+    <description>Recent content in Tech on Corvus Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/corvusblog/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tasky - here we go !</title>
+      <link>http://localhost:1313/corvusblog/posts/2-.on-the-road-again/</link>
+      <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/corvusblog/posts/2-.on-the-road-again/</guid>
+      <description>&lt;p&gt;On y va on se lance pour de bon !&lt;/p&gt;
+&lt;p&gt;On se lance dans les details de la création de Tasky, que tu peut retrouver &lt;a href=&#34;https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone&#34;&gt;ICI Tasky&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;On commence donc par créer le ficher qui va gérer les commandes reçu.&lt;/p&gt;
+&lt;p&gt;donc on créer le dossier du projet:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir tasky
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd tasky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;on créer ensuite le dossier pour les scripts&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir src
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;et finalement le fichier pour les commandes cli&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch cli.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maintenant on va devoir ajouter quelque librairies pour pouvoir faire ce que l&amp;rsquo;on veut&lt;/p&gt;</description>
+      <content>&lt;p&gt;On y va on se lance pour de bon !&lt;/p&gt;
+&lt;p&gt;On se lance dans les details de la création de Tasky, que tu peut retrouver &lt;a href=&#34;https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone&#34;&gt;ICI Tasky&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;On commence donc par créer le ficher qui va gérer les commandes reçu.&lt;/p&gt;
+&lt;p&gt;donc on créer le dossier du projet:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir tasky
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd tasky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;on créer ensuite le dossier pour les scripts&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir src
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;et finalement le fichier pour les commandes cli&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch cli.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maintenant on va devoir ajouter quelque librairies pour pouvoir faire ce que l&amp;rsquo;on veut&lt;/p&gt;
+&lt;p&gt;on va avoir besoin de:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/commander&#34;&gt;Commander&lt;/a&gt; solution pour les script node en cli&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/chalk&#34;&gt;chalk&lt;/a&gt; Pour mettre un peu de couleurs dans nos vies !&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/pidusage&#34;&gt;pidusage&lt;/a&gt; Pour connaitre le pourcentage d&amp;rsquo;utilisation du cpu pour chaque process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;on va donc installer tout ça !&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;on va initier le projet et installer les dependences:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install commander chalk pidusage
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;initialization-clijs&#34;&gt;Initialization cli.js&lt;/h2&gt;
+&lt;p&gt;On va enfin pouvoir commencer !&lt;/p&gt;
+&lt;p&gt;On va donc ouvrir le fichier &lt;code&gt;cli.js&lt;/code&gt;, dans lequel on va ajouter la gestion des commandes lancer depuis le terminal.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cli.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/usr/bin/env node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;Command&lt;/span&gt; } &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;commander&amp;#39;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Import commander for the cli command gestion
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fs&amp;#39;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Import fs for files gestion
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;chalk&amp;#39;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Import chalk for colorization
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Command&lt;/span&gt;(); &lt;span style=&#34;color:#75715e&#34;&gt;// Initialization of a new Command instance
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;code for the command we goind to details down there
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;**/&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;parse&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;argv&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Get all the arguments of the cli command
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;tasky-start&#34;&gt;tasky start&lt;/h2&gt;
+&lt;p&gt;On va donc rajouter dans notre script la gestion des commandes, on commence par la command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tasky start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cli.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to start a new process
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Start a new process&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cyan&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Starting process: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; with script &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;startProcess&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		} &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Error starting process: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comme on peut le voir ici on ajoute en premier la commande:
+&lt;code&gt;.command(&#39;start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&#39;)&lt;/code&gt;
 Qui avec la description:
-&lt;code>.description('Start a new process')&lt;/code>
+&lt;code&gt;.description(&#39;Start a new process&#39;)&lt;/code&gt;
 Ajoute une ligne dans le manuel de notre script.
-Elle prend donc comme arguments le nom du process et le script que l&amp;rsquo;on va lancer.&lt;/p>
-&lt;hr>
-&lt;h2 id="tasky-stop">tasky stop&lt;/h2>
-&lt;p>&lt;code>tasky stop &amp;lt;pid&amp;gt;&lt;/code>&lt;/p>
-&lt;p>&lt;code>cli.js&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// Command to stop a process by PID
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">program&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">command&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;stop &amp;lt;pid | name&amp;gt;&amp;#39;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">description&lt;/span>(&lt;span style="color:#e6db74">&amp;#39;Stop a process by PID or name&amp;#39;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#a6e22e">action&lt;/span>((&lt;span style="color:#a6e22e">pid&lt;/span>) =&amp;gt; {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">log&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">yellow&lt;/span>(&lt;span style="color:#e6db74">`Stopping process with PID: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">pid&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">stopProcess&lt;/span>(Number(&lt;span style="color:#a6e22e">pid&lt;/span>));
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> } &lt;span style="color:#66d9ef">catch&lt;/span> (&lt;span style="color:#a6e22e">error&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">console&lt;/span>.&lt;span style="color:#a6e22e">error&lt;/span>(&lt;span style="color:#a6e22e">chalk&lt;/span>.&lt;span style="color:#a6e22e">red&lt;/span>(&lt;span style="color:#e6db74">`Error stopping process: &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">error&lt;/span>.&lt;span style="color:#a6e22e">message&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>));
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> });
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Comme on peut le voir ici on ajoute en premier la commande:
-&lt;code>.command('stop &amp;lt;pid | name&amp;gt;')&lt;/code>
+Elle prend donc comme arguments le nom du process et le script que l&amp;rsquo;on va lancer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tasky-stop&#34;&gt;tasky stop&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tasky stop &amp;lt;pid&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cli.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to stop a process by PID
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;stop &amp;lt;pid | name&amp;gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Stop a process by PID or name&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;yellow&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Stopping process with PID: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;stopProcess&lt;/span&gt;(Number(&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		} &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Error stopping process: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Comme on peut le voir ici on ajoute en premier la commande:
+&lt;code&gt;.command(&#39;stop &amp;lt;pid | name&amp;gt;&#39;)&lt;/code&gt;
 Qui avec la description:
-&lt;code>.description('Stop a process by PID or name')&lt;/code>
+&lt;code&gt;.description(&#39;Stop a process by PID or name&#39;)&lt;/code&gt;
 Ajoute une ligne dans le manuel de notre script.
-Elle prend donc comme arguments le pid ou le nom du process a arreter&lt;/p></content></item><item><title>Tasky - what i want</title><link>https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone/</link><pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate><guid>https://tashikomaaa.github.io/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone/</guid><description>&lt;p>&lt;img alt="Image Description" src="https://tashikomaaa.github.io/corvusblog/images/logo.png">&lt;/p>
-&lt;hr>
-&lt;p>&lt;strong>Tasky&lt;/strong> is a lightweight process manager for &lt;a href="https://nodejs.org/en">Nodejs&lt;/a> applications and other processes. With an intuitive command-line interface, it helps you easily manage, monitor, and track your processes in real time. Ideal for simple use cases and smaller applications.&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;a href="#features" title="Features">🚀 Features&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#installation" title="Installation">🛠️ Installation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#usage">📋 Usage&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#development">🧑‍💻 Development&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#roadmap">🗺️ Roadmap&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#contributing">🤝 Contributing&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#license">📝 License&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#acknowledgments">💬 Acknowledgments&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#contact">📬 Contact&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="features">Features&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Start, Stop, and Manage Processes&lt;/strong>: Control your applications with simple commands.&lt;/li>
-&lt;li>&lt;strong>Real-Time Resource Monitoring&lt;/strong>: Track CPU and memory usage on the fly.&lt;/li>
-&lt;li>&lt;strong>Live Log Viewing&lt;/strong>: View real-time logs of your processes.&lt;/li>
-&lt;li>&lt;strong>Persistent Process Information&lt;/strong>: Logs and process data are saved for later reference.&lt;/li>
-&lt;li>&lt;strong>Lightweight &amp;amp; Intuitive&lt;/strong>: Simple, fast, and easy-to-use tool for process management.&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;h3 id="clone-the-repository">Clone the Repository&lt;/h3>
-&lt;p>To get started, clone the repository:&lt;/p></description><content>&lt;p>&lt;img alt="Image Description" src="https://tashikomaaa.github.io/corvusblog/images/logo.png">&lt;/p>
-&lt;hr>
-&lt;p>&lt;strong>Tasky&lt;/strong> is a lightweight process manager for &lt;a href="https://nodejs.org/en">Nodejs&lt;/a> applications and other processes. With an intuitive command-line interface, it helps you easily manage, monitor, and track your processes in real time. Ideal for simple use cases and smaller applications.&lt;/p>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;a href="#features" title="Features">🚀 Features&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#installation" title="Installation">🛠️ Installation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#usage">📋 Usage&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#development">🧑‍💻 Development&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#roadmap">🗺️ Roadmap&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#contributing">🤝 Contributing&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#license">📝 License&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#acknowledgments">💬 Acknowledgments&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#contact">📬 Contact&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="features">Features&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Start, Stop, and Manage Processes&lt;/strong>: Control your applications with simple commands.&lt;/li>
-&lt;li>&lt;strong>Real-Time Resource Monitoring&lt;/strong>: Track CPU and memory usage on the fly.&lt;/li>
-&lt;li>&lt;strong>Live Log Viewing&lt;/strong>: View real-time logs of your processes.&lt;/li>
-&lt;li>&lt;strong>Persistent Process Information&lt;/strong>: Logs and process data are saved for later reference.&lt;/li>
-&lt;li>&lt;strong>Lightweight &amp;amp; Intuitive&lt;/strong>: Simple, fast, and easy-to-use tool for process management.&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;h3 id="clone-the-repository">Clone the Repository&lt;/h3>
-&lt;p>To get started, clone the repository:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone https://github.com/tashikomaaa/tasky.git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd tasky
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="install-dependencies">Install Dependencies&lt;/h3>
-&lt;p>Install the necessary dependencies with npm:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash install.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="usage">Usage&lt;/h2>
-&lt;p>Start Tasky with Node.js:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky &amp;lt;command&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="available-commands">Available Commands&lt;/h3>
-&lt;h4 id="start-a-process">&lt;strong>Start a Process&lt;/strong>&lt;/h4>
-&lt;p>Launch a new process by specifying its name and script path:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky start my-app ./app.js
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="stop-a-process">&lt;strong>Stop a Process&lt;/strong>&lt;/h4>
-&lt;p>Terminate a process by its PID:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky stop &amp;lt;pid&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky stop &lt;span style="color:#ae81ff">12345&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="list-running-processes">&lt;strong>List Running Processes&lt;/strong>&lt;/h4>
-&lt;p>List all currently running processes:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example Output:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Running processes:
+Elle prend donc comme arguments le pid ou le nom du process a arreter&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-entire-file&#34;&gt;the entire file&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/usr/bin/env node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;Command&lt;/span&gt; } &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;commander&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fs&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;chalk&amp;#39;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Import chalk for colorization
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;startProcess&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;stopProcess&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;listProcesses&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;realtimeLogs&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;viewProcessLogs&lt;/span&gt; } &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;./manager.js&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;monitorProcess&lt;/span&gt; } &lt;span style=&#34;color:#a6e22e&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;./monitor.js&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Command&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Function to tail the log file and display new logs as they are added
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tailLogs&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;existsSync&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;)) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Log file does not exist: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;green&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Tailing log file: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;createReadStream&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;, { &lt;span style=&#34;color:#a6e22e&#34;&gt;encoding&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;statSync&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;chunk&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;stdout&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;write&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;blue&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chunk&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// Log output with blue color
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Watch for file changes and display new log data as it appears
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;watchFile&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;, () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;newStream&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;createReadStream&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;, { &lt;span style=&#34;color:#a6e22e&#34;&gt;encoding&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;statSync&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;newStream&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;, (&lt;span style=&#34;color:#a6e22e&#34;&gt;chunk&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;stdout&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;write&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;blue&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chunk&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// Output new logs in blue
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Graceful exit by stopping the file watch
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;SIGINT&amp;#39;&lt;/span&gt;, () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fs&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;unwatchFile&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Unwatch file when process is terminated
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;yellow&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Stopped watching log file.&amp;#39;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;exit&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to start a new process
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Start a new process&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;cyan&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Starting process: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; with script &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;startProcess&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;} &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Error starting process: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to stop a process by PID
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;stop &amp;lt;pid&amp;gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Stop a process by PID&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;yellow&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Stopping process with PID: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;stopProcess&lt;/span&gt;(Number(&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;} &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Error stopping process: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to list all running processes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;list&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;List all running processes&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;(() =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;magenta&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Listing all running processes...&amp;#39;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listProcesses&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to monitor a process by PID
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;monitor &amp;lt;pid&amp;gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Monitor a process by PID&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;green&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Monitoring process with PID: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;monitorProcess&lt;/span&gt;(Number(&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Command to view real-time logs of a process by PID
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;command&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;logs &amp;lt;pid&amp;gt;&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;View real-time logs of a process&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;action&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;processInfo&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;realtimeLogs&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;processInfo&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;processInfo&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;blue&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`Viewing logs for process with PID: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;viewProcessLogs&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;processInfo&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;logPath&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;chalk&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;red&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`No log path available for process with PID &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;pid&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;program&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;parse&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;argv&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Tasky - what i want</title>
+      <link>http://localhost:1313/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/corvusblog/posts/1-.ready-to-create-my-own-pm2-clone/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://tashikomaaa.github.io/corvusblog/images/logo.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Tasky&lt;/strong&gt; is a lightweight process manager for &lt;a href=&#34;https://nodejs.org/en&#34;&gt;Nodejs&lt;/a&gt; applications and other processes. With an intuitive command-line interface, it helps you easily manage, monitor, and track your processes in real time. Ideal for simple use cases and smaller applications.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Start, Stop, and Manage Processes&lt;/strong&gt;: Control your applications with simple commands.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-Time Resource Monitoring&lt;/strong&gt;: Track CPU and memory usage on the fly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Live Log Viewing&lt;/strong&gt;: View real-time logs of your processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Persistent Process Information&lt;/strong&gt;: Logs and process data are saved for later reference.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight &amp;amp; Intuitive&lt;/strong&gt;: Simple, fast, and easy-to-use tool for process management.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;clone-the-repository&#34;&gt;Clone the Repository&lt;/h3&gt;
+&lt;p&gt;To get started, clone the repository:&lt;/p&gt;</description>
+      <content>&lt;p&gt;&lt;img alt=&#34;Image Description&#34; src=&#34;https://tashikomaaa.github.io/corvusblog/images/logo.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Tasky&lt;/strong&gt; is a lightweight process manager for &lt;a href=&#34;https://nodejs.org/en&#34;&gt;Nodejs&lt;/a&gt; applications and other processes. With an intuitive command-line interface, it helps you easily manage, monitor, and track your processes in real time. Ideal for simple use cases and smaller applications.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Start, Stop, and Manage Processes&lt;/strong&gt;: Control your applications with simple commands.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-Time Resource Monitoring&lt;/strong&gt;: Track CPU and memory usage on the fly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Live Log Viewing&lt;/strong&gt;: View real-time logs of your processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Persistent Process Information&lt;/strong&gt;: Logs and process data are saved for later reference.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight &amp;amp; Intuitive&lt;/strong&gt;: Simple, fast, and easy-to-use tool for process management.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;clone-the-repository&#34;&gt;Clone the Repository&lt;/h3&gt;
+&lt;p&gt;To get started, clone the repository:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/tashikomaaa/tasky.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd tasky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-dependencies&#34;&gt;Install Dependencies&lt;/h3&gt;
+&lt;p&gt;Install the necessary dependencies with npm:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bash install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;Start Tasky with Node.js:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky &amp;lt;command&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;available-commands&#34;&gt;Available Commands&lt;/h3&gt;
+&lt;h4 id=&#34;start-a-process&#34;&gt;&lt;strong&gt;Start a Process&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Launch a new process by specifying its name and script path:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky start &amp;lt;name&amp;gt; &amp;lt;script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky start my-app ./app.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;stop-a-process&#34;&gt;&lt;strong&gt;Stop a Process&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Terminate a process by its PID:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky stop &amp;lt;pid&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky stop &lt;span style=&#34;color:#ae81ff&#34;&gt;12345&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;list-running-processes&#34;&gt;&lt;strong&gt;List Running Processes&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;List all currently running processes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example Output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Running processes:
 - my-app (PID: 12345, Script: ./app.js)
 - another-app (PID: 67890, Script: ./server.js)
-&lt;/code>&lt;/pre>&lt;h4 id="monitor-a-process">&lt;strong>Monitor a Process&lt;/strong>&lt;/h4>
-&lt;p>Monitor CPU and memory usage for a specific process:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky monitor &amp;lt;pid&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example Output:&lt;/p>
-&lt;pre tabindex="0">&lt;code>PID 12345 - CPU: 10.5%, Memory: 32.64 MB
-&lt;/code>&lt;/pre>&lt;h4 id="view-real-time-logs">&lt;strong>View Real-Time Logs&lt;/strong>&lt;/h4>
-&lt;p>See the real-time logs for a process:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky logs &amp;lt;pid&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Example:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>tasky logs &lt;span style="color:#ae81ff">12345&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h2 id="development">Development&lt;/h2>
-&lt;h3 id="project-structure">Project Structure&lt;/h3>
-&lt;pre tabindex="0">&lt;code>tasky/
-├── logs/ # Logs for processes
-├── src/ # Source code
-│ ├── manager.js # Process management logic
-│ ├── monitor.js # Monitoring logic
-│ └── cli.js # Command-line interface
-├── package.json # Project dependencies and metadata
-└── README.md # Documentation
-&lt;/code>&lt;/pre>&lt;h3 id="add-new-features">Add New Features&lt;/h3>
-&lt;ul>
-&lt;li>Modify &lt;code>src/cli.js&lt;/code> to add new commands.&lt;/li>
-&lt;li>Implement new functionality in &lt;code>src/manager.js&lt;/code> or a separate module.&lt;/li>
-&lt;li>Follow the modular design for maintainability.&lt;/li>
-&lt;/ul>
-&lt;h3 id="testing">Testing&lt;/h3>
-&lt;p>To test, run multiple commands and observe logs, resource usage, and process management behavior.&lt;/p>
-&lt;hr>
-&lt;h2 id="roadmap">Roadmap&lt;/h2>
-&lt;h3 id="planned-features">Planned Features&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Clustering Support&lt;/strong>: Scale applications across multiple CPU cores.&lt;/li>
-&lt;li>&lt;strong>Log Filtering &amp;amp; Search&lt;/strong>: Advanced log filtering and search capabilities.&lt;/li>
-&lt;li>&lt;strong>Docker Integration&lt;/strong>: Manage processes running inside Docker containers.&lt;/li>
-&lt;li>&lt;strong>Remote API&lt;/strong>: API support for managing processes remotely.&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="contributing">Contributing&lt;/h2>
-&lt;p>We welcome contributions! To contribute:&lt;/p>
-&lt;ol>
-&lt;li>Fork the repository.&lt;/li>
-&lt;li>Create a new branch for your feature or bugfix.&lt;/li>
-&lt;li>Open a pull request with a detailed description of your changes.&lt;/li>
-&lt;/ol>
-&lt;hr>
-&lt;h2 id="license">License&lt;/h2>
-&lt;p>This project is licensed under the MIT License. See the &lt;a href="LICENSE">LICENSE&lt;/a> file for more details.&lt;/p>
-&lt;hr>
-&lt;h2 id="acknowledgments">Acknowledgments&lt;/h2>
-&lt;p>Inspired by &lt;a href="https://pm2.keymetrics.io/">PM2&lt;/a>, &lt;strong>Tasky&lt;/strong> is a lightweight alternative for managing Node.js processes.&lt;/p>
-&lt;hr>
-&lt;h2 id="contact">Contact&lt;/h2>
-&lt;p>For questions or feedback, feel free to contact &lt;a href="mailto:tashikomaa@gmail.com">Aldwin Moutarlier&lt;/a>.&lt;/p>
-&lt;hr></content></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;monitor-a-process&#34;&gt;&lt;strong&gt;Monitor a Process&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Monitor CPU and memory usage for a specific process:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky monitor &amp;lt;pid&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example Output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PID 12345 - CPU: 10.5%, Memory: 32.64 MB
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;view-real-time-logs&#34;&gt;&lt;strong&gt;View Real-Time Logs&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;See the real-time logs for a process:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky logs &amp;lt;pid&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tasky logs &lt;span style=&#34;color:#ae81ff&#34;&gt;12345&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+&lt;h3 id=&#34;project-structure&#34;&gt;Project Structure&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tasky/
+├── logs/           # Logs for processes
+├── src/            # Source code
+│   ├── manager.js  # Process management logic
+│   ├── monitor.js  # Monitoring logic
+│   └── cli.js      # Command-line interface
+├── package.json    # Project dependencies and metadata
+└── README.md       # Documentation
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;add-new-features&#34;&gt;Add New Features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Modify &lt;code&gt;src/cli.js&lt;/code&gt; to add new commands.&lt;/li&gt;
+&lt;li&gt;Implement new functionality in &lt;code&gt;src/manager.js&lt;/code&gt; or a separate module.&lt;/li&gt;
+&lt;li&gt;Follow the modular design for maintainability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;testing&#34;&gt;Testing&lt;/h3&gt;
+&lt;p&gt;To test, run multiple commands and observe logs, resource usage, and process management behavior.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
+&lt;h3 id=&#34;planned-features&#34;&gt;Planned Features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clustering Support&lt;/strong&gt;: Scale applications across multiple CPU cores.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Log Filtering &amp;amp; Search&lt;/strong&gt;: Advanced log filtering and search capabilities.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker Integration&lt;/strong&gt;: Manage processes running inside Docker containers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remote API&lt;/strong&gt;: API support for managing processes remotely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing&lt;/h2&gt;
+&lt;p&gt;We welcome contributions! To contribute:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fork the repository.&lt;/li&gt;
+&lt;li&gt;Create a new branch for your feature or bugfix.&lt;/li&gt;
+&lt;li&gt;Open a pull request with a detailed description of your changes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;This project is licensed under the MIT License. See the &lt;a href=&#34;LICENSE&#34;&gt;LICENSE&lt;/a&gt; file for more details.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
+&lt;p&gt;Inspired by &lt;a href=&#34;https://pm2.keymetrics.io/&#34;&gt;PM2&lt;/a&gt;, &lt;strong&gt;Tasky&lt;/strong&gt; is a lightweight alternative for managing Node.js processes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;
+&lt;p&gt;For questions or feedback, feel free to contact &lt;a href=&#34;mailto:tashikomaa@gmail.com&#34;&gt;Aldwin Moutarlier&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>corvusblog</title>
+      <link>http://localhost:1313/corvusblog/posts/first-post/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/corvusblog/posts/first-post/</guid>
+      <description>&lt;p&gt;Welcome to my tiny blog!&lt;/p&gt;
+&lt;p&gt;Here, I plan to share ideas, projects, and random thoughts that I want to save somewhere for future reference.
+It&amp;rsquo;s a little corner where I can document my work process, highlight some of the small tools I create, and talk about the challenges I encounter in my business.&lt;/p&gt;
+&lt;p&gt;My goal is to keep this space both personal and informative.
+I hope you find some of the content interesting or, at the very least, useful in your own journey.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Welcome to my tiny blog!&lt;/p&gt;
+&lt;p&gt;Here, I plan to share ideas, projects, and random thoughts that I want to save somewhere for future reference.
+It&amp;rsquo;s a little corner where I can document my work process, highlight some of the small tools I create, and talk about the challenges I encounter in my business.&lt;/p&gt;
+&lt;p&gt;My goal is to keep this space both personal and informative.
+I hope you find some of the content interesting or, at the very least, useful in your own journey.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll notice that I’ll occasionally switch between English and French in my posts.
+Being French, I feel more comfortable expressing certain ideas in my native language.
+That said, I want to keep practicing English, even if it’s not perfect.
+So, please bear with me if you come across some &amp;ldquo;franglais&amp;rdquo; moments in the text!&lt;/p&gt;
+&lt;p&gt;I’ve deliberately chosen not to rely on automatic translation tools.
+Instead, I prefer writing naturally, even if it means making some mistakes along the way.
+I believe it’s all part of the process.&lt;/p&gt;
+&lt;p&gt;Thanks for stopping by, and I hope you enjoy reading!&lt;/p&gt;
+&lt;p&gt;Corvus&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
